@@ -1,0 +1,13 @@
+.FlagIcon {
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.FlagIcon::after {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid red;
+  width: 0;
+  height: 0;
+}

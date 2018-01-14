@@ -1,0 +1,10 @@
+.FiveDay {
+    list-style: none;
+    text-align: center;
+    display: block;
+}
+
+.FiveDay li {
+    display: inline-block;
+    border: 1px solid black;
+}

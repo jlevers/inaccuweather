@@ -1,0 +1,52 @@
+.SettingsBar {
+  height: 1em;
+  margin-bottom: 20px;
+}
+
+.location-settings {
+  float: left;
+  position: relative;
+}
+
+.country-breadcrumbs {
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 0px;
+}
+
+.country-breadcrumbs li {
+  display: inline-block;
+}
+
+.country-breadcrumbs li::before {
+  content: '> ';
+}
+
+.country-breadcrumbs li.first::before {
+  content: '';
+}
+
+.country-breadcrumbs li::after {
+  content: ' ';
+  white-space: pre;
+}
+
+.country-breadcrumbs li.last::after {
+  content: '';
+}
+
+.data-settings {
+  float: right;
+  position: relative;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.data-settings span {
+  color: #4C6071;
+  text-transform: uppercase;
+  font-weight: bold;
+}
