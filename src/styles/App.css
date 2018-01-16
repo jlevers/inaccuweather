@@ -1,4 +1,10 @@
 .App {
   text-align: center;
-  background: #D6D3D2;
+  max-width: 100%;
+  display: inline-block;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.limit-width {
+  width: 990px;
 }

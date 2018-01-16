@@ -1,0 +1,21 @@
+#CityHeader {
+  width: 100vw;
+  min-width: 990px;
+  overflow: hidden;
+  background-color: #141D26;
+}
+
+#city-header-nav {
+  list-style: none;
+}
+
+#city-header-nav li {
+  display: inline-block;
+  position: relative;
+}
+
+#city-header-nav li a {
+  color: #C3C3C3;
+  text-decoration: none;
+  font-size: 16px;
+}

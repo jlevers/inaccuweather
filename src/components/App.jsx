@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SettingsBar from './SettingsBar.jsx';
 import Header from './Header.jsx';
+import SubHeader from './SubHeader.jsx';
 import FiveDay from './FiveDay.jsx';
 import '../styles/App.css';
 
@@ -25,6 +26,7 @@ class App extends Component {
           location={{ code: 'th' }}
         />
         <Header />
+        <SubHeader />
         <FiveDay />
       </div>
     );

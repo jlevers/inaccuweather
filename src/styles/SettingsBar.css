@@ -1,6 +1,11 @@
 .SettingsBar {
   height: 1em;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.settings-bar-container {
+  display: inline-block;
+  margin: 0;
 }
 
 .location-settings {
@@ -18,11 +23,16 @@
 }
 
 .country-breadcrumbs li {
-  display: inline-block;
+  display: inline;
+  vertical-align: middle;
+  font-size: 11px;
+  color: rgba(31, 56, 77, 0.5);
 }
 
 .country-breadcrumbs li::before {
   content: '> ';
+  display: inline;
+  vertical-align: 10%;
 }
 
 .country-breadcrumbs li.first::before {
@@ -47,6 +57,7 @@
 
 .data-settings span {
   color: #4C6071;
+  font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
 }
