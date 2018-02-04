@@ -1,0 +1,69 @@
+/*
+ * This has all the classes for making the wind direction arrow
+ * point in any of the standard directions. It actually points
+ * the arrow to the opposite of the direction specified, since
+ * the arrow is pointing the direction that the wind is blowing
+ * _toward_, even though the direction class is the direction
+ * the wind is coming _from_. E.g., if the wind is coming from
+ * the east, the .E class will point the arrow towards the west.
+ */
+
+.E {
+  transform: rotate(45deg);
+}
+
+.ESE {
+  transform: rotate(67.5deg);
+}
+
+.SE {
+  transform: rotate(90deg);
+}
+
+.SSE {
+  transform: rotate(112.5deg);
+}
+
+.S {
+  transform: rotate(135deg);
+}
+
+.SSW {
+  transform: rotate(157.5deg);
+}
+
+.SW {
+  transform: rotate(180deg);
+}
+
+.WSW {
+  transform: rotate(202.5deg);
+}
+
+.W {
+  transform: rotate(225deg);
+}
+
+.WNW {
+  transform: rotate(247.5deg);
+}
+
+.NW {
+  transform: rotate(270deg);
+}
+
+.NNW {
+  transform: rotate(292.5deg);
+}
+
+.N {
+  transform: rotate(315deg);
+}
+
+.NNE {
+  transform: rotate(337.5deg);
+}
+
+.ENE {
+  transform: rotate(22.5deg);
+}

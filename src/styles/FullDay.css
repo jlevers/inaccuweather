@@ -1,0 +1,72 @@
+.FullDay {
+  position: relative;
+  height: 245px;
+  background: #F7F6F5;
+  border: 1px solid #C8C8C8;
+  border-left: none;
+  border-radius: 3px;
+}
+
+.day, .date {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.day {
+  color: #00AFBE;
+  font-weight: 700;
+}
+
+.date {
+  color: #999;
+}
+
+.temp {
+  margin-top: 10px;
+}
+
+.high-temp, .low-temp {
+  float: left;
+}
+
+.high-temp, .weather-description {
+  color: #1F384D;
+}
+
+.high-temp {
+  font-size: 25px;
+}
+
+.low-temp {
+  font-size: 20px;
+  color: #999;
+}
+
+
+.weather-image {
+  background-image: url('https://vortex.accuweather.com/adc2010/images/slate/icons/03.svg');
+  position: relative;
+  display: block;
+  margin-top: 20px;
+}
+
+.weather-description {
+  font-size: 12px;
+  line-height: 13px;
+  text-align: left;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.more-button {
+  font-size: 11px;
+  color: #F05514;
+  position: absolute;
+  text-align: left;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  margin-left: 10px;
+}

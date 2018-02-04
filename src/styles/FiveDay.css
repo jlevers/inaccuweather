@@ -1,10 +1,108 @@
-.FiveDay {
-    list-style: none;
-    text-align: center;
-    display: block;
+ul.FiveDay {
+  list-style: none;
+  text-align: center;
+  display: block;
+  padding: 0;
+  margin-top: 5px;
 }
 
 .FiveDay li {
-    display: inline-block;
-    border: 1px solid black;
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.FiveDay li div.FullDay{
+  padding: 10px;
+  width: 112px;
+  box-sizing: border-box;
+}
+
+.FiveDay li div.FullDay.active {
+  padding: 10px 15px;
+  border-bottom: 3px solid #F05514;
+  width: 155px;
+  background: #FFF;
+  box-shadow: 10px 0 10px -10px #666;
+  display: block;
+  position: relative;
+}
+
+.FiveDay li div.FullDay.active.last {
+  box-shadow: none;
+}
+
+.FiveDay li.first div.FullDay {
+  border-left: 1px solid #C8C8C8;
+}
+
+.FiveDay li div.FullDay .weather-image {
+  top: 0;
+  bottom: 0;
+  margin-top: 20px;
+  height: 60px;
+  width: 60px;
+}
+
+.FiveDay li div.FullDay.active .weather-image {
+  top: 7px;
+  bottom: -7px;
+  left: 5px;
+  margin-top: 0px;
+  height: 80px;
+  width: 80px;
+}
+
+.FiveDay li div.FullDay.active .temp {
+  margin: 0;
+  margin-left: 8px;
+  margin-top: 5px;
+}
+
+.FiveDay li div.FullDay.active .high-temp {
+  font-size: 35px;
+}
+
+.FiveDay li div.FullDay.active .low-temp {
+  font-size: 24px;
+  position: relative;
+  top: -14px;
+  width: 55%;
+}
+
+.FiveDay li div.FullDay.active .low-temp::after {
+  content: 'F';
+}
+
+.FiveDay li div.FullDay.active .more-button {
+  visibility: hidden;
+}
+
+.FiveDay li div.FullDay.active .weather-description {
+  font-size: 16px;
+  line-height: normal;
+  position: absolute;
+  margin-top: 10px;
+  bottom: 7px;
+  left: 15px;
+}
+
+.FiveDay .left-arrow, .FiveDay .right-arrow {
+  position: absolute;
+  display: inline-block;
+  height: 40px;
+  width: 22px;
+  top: 102.5px;
+  z-index: 2;
+  color: transparent;
+}
+
+.FiveDay .left-arrow {
+  background: url('https://vortex.accuweather.com/adc2010/images/slate/left-panel.png') no-repeat;
+  left: 1px;
+}
+
+.FiveDay .right-arrow {
+  background: url('https://vortex.accuweather.com/adc2010/images/slate/right-panel.png') no-repeat;
+  right: 1px;
 }

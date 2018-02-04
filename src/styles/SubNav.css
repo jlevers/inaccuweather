@@ -1,0 +1,58 @@
+
+.subnav-container {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  height: 36.5px;
+  line-height: 36.5px;
+}
+
+.subnav-tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.subnav-tabs li {
+  display: inline-block;
+  position: relative;
+  float: left;
+  border-right: 1px solid #4F545B;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.subnav-tabs li a {
+  height: 100%;
+  font-size: 16px;
+  color: #C3C3C3;
+  padding: 0 10px;
+}
+
+.subnav-tabs li.active::after {
+  left: 0;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  background: #F05514;
+  margin-bottom: 1px;
+}
+
+.subnav-tabs li.active a {
+  color: white;
+}
+
+.subnav-tabs .subnav-promo {
+  float: right;
+  background-color: #F05514;
+}
+
+.subnav-tabs .subnav-promo a {
+  color: white;
+}
+
+.left-border {
+  border-left: 1px solid #4F545B;
+}

@@ -5,6 +5,20 @@
   font-family: helvetica, arial, sans-serif;
 }
 
+.main-body {
+  max-width: 603px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .limit-width {
   width: 990px;
+}
+
+.icon {
+  background-size: cover;
 }
