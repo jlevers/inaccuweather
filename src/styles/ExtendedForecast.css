@@ -1,3 +1,8 @@
 .ExtendedForecast {
   margin: 0 auto;
 }
+
+.ExtendedForecast div.rise-set-widgets {
+  display: flex;
+  justify-content: space-between;
+}

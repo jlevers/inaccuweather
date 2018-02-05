@@ -1,6 +1,6 @@
 @import './WindArrow.css';
 
-.DayDetailInfo {
+div.DayDetailInfo {
   margin-top: 10px;
   height: 350px;
 }
@@ -15,7 +15,7 @@
 .DayDetailInfo .forecast-main {
   width: 60%;
   background-color: #FFF;
-  box-shadow: 10px 0 10px -10px #999;
+  box-shadow: 3px 0 10px #999;
   position: relative;
   padding: 30px;
   color: #1F384D;
@@ -91,7 +91,5 @@
 .DayDetailInfo .forecast-details ul {
   margin-left: 40px;
   padding: 0;
-  list-style: none;
-  color: #999;
   line-height: 1.5;
 }

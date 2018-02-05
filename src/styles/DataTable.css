@@ -1,0 +1,14 @@
+.DataTable .data-table-row {
+  border-top: 1px solid #C8C8C8;
+  height: 38px;
+  vertical-align: middle;
+}
+
+.DataTable .data-table-row-title {
+  margin-right: 20px;
+}
+
+.DataTable .data-table-header-row th, .DataTable .data-table-row-title {
+  color: #999;
+  font-weight: normal;
+}

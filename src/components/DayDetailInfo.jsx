@@ -9,7 +9,7 @@ function DayDetailInfo(props) {
   // pressure has gone down.
   const pressureSymbol = props.pressure.pressureChange ? '↑' : '↓';
   return (
-    <div className='DayDetailInfo'>
+    <div className='DayDetailInfo feature-element'>
       <div className='forecast-main'>
         <div className='weather-image icon'></div>
         <div className='temp'>
@@ -27,7 +27,7 @@ function DayDetailInfo(props) {
         </div>
         <div className='stats'>
         </div>
-        <ul className='details-list'>
+        <ul className='details-list feature-label'>
           <li className='wind-info'>Winds from the {props.wind.direction}</li>
           <li className='wind-info'>{props.wind.speed} mph</li>
           <li>Humidity: {props.humidity}%</li>

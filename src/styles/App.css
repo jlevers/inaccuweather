@@ -15,8 +15,30 @@ a {
   color: black;
 }
 
+ul {
+  list-style: none;
+}
+
 .limit-width {
   width: 990px;
+}
+
+.feature-element {
+  border: 1px solid #C8C8C8;
+  background-color: #FFF;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.feature-label {
+  color: #999;
+}
+
+.feature-title {
+  color: #00AFBE;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .icon {

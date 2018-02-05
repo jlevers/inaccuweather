@@ -23,9 +23,9 @@ function FullDay(props) {
   });
 
   const day = (
-    <div className={'FullDay' + active}>
-      <div className='day'>{dayName}</div>
-      <div className='date'>{date}</div>
+    <div className={'FullDay feature-element' + active}>
+      <div className='feature-title'>{dayName}</div>
+      <div className='date feature-label'>{date}</div>
       <div className='weather-image icon'></div>
       <div className='temp'>
         <span className='high-temp'>{props.high}&deg;</span>

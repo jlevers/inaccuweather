@@ -1,24 +1,14 @@
-.FullDay {
+.FullDay.feature-element {
   position: relative;
   height: 245px;
   background: #F7F6F5;
-  border: 1px solid #C8C8C8;
   border-left: none;
   border-radius: 3px;
 }
 
-.day, .date {
+.date {
   font-size: 12px;
   text-transform: uppercase;
-  text-align: left;
-}
-
-.day {
-  color: #00AFBE;
-  font-weight: 700;
-}
-
-.date {
   color: #999;
 }
 

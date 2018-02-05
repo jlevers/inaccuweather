@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import FeedControls from './FeedControls.jsx';
 import FiveDay from './FiveDay.jsx';
 import DayDetails from './DayDetails.jsx';
+import RiseSetWidget from './RiseSetWidget.jsx';
+import TempSummary from './TempSummary.jsx';
+import '../styles/ExtendedForecast.css';
 
 class ExtendedForecast extends Component {
   constructor(props) {
@@ -30,6 +33,21 @@ class ExtendedForecast extends Component {
         <DayDetails
           start={this.props.start}
         />
+        <div className='rise-set-widgets main-body'>
+          <RiseSetWidget
+            planet='Sun'
+            rise='6:45 AM'
+            set='6:19 PM'
+            duration='11:34'
+          />
+          <RiseSetWidget
+            planet='Moon'
+            rise='10:02 PM'
+            set='10:23 AM'
+            duration='12:21'
+          />
+        </div>
+        <TempSummary />
       </div>
     );
   }

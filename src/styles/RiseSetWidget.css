@@ -1,0 +1,47 @@
+.RiseSetWidget {
+  background-color: #FFF;
+  width: 49.5%;
+  display: inline-block;
+  padding: 15px 15px 5px 15px;
+  position: relative;
+}
+
+.RiseSetWidget ul {
+  padding: 0;
+  margin-top: 5px;
+  position: relative;
+  margin: 0;
+  width: 60%;
+}
+
+.RiseSetWidget ul li {
+  text-align: left;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #1F384D;
+}
+
+.RiseSetWidget ul li:last-child {
+  margin-top: 10px;
+}
+
+.RiseSetWidget span.label {
+  color: #999;
+}
+
+.RiseSetWidget .day-or-night {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.RiseSetWidget.Sun .day-or-night {
+  background-image: url('https://vortex.accuweather.com/adc2010/images/slate/icons/01.svg');
+}
+
+.RiseSetWidget.Moon .day-or-night {
+  background-image: url('https://vortex.accuweather.com/adc2010/images/slate/icons/33.svg');
+}
