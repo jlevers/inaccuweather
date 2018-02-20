@@ -4,7 +4,7 @@ import '../styles/FeedControls.css';
 function FeedControls(props) {
 
   let content = (
-    <div className='FeedControls main-body'>
+    <div className='FeedControls main-body feature-element'>
       <div className='left'>
         <span className='current-range'>{props.start} - {props.end} of {props.maxPredictionSpan} days&nbsp;|&nbsp;</span>
         <span className='full-forecast'>

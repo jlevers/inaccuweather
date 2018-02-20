@@ -1,8 +1,5 @@
 div.FeedControls {
   margin-top: 15px;
-  border: 1px solid #C8C8C8;
-  border-radius: 3px;
-  background: #F7F6F5;
   display: flex;
   justify-content: space-between;
   font-size: 12px;
@@ -20,21 +17,4 @@ div.FeedControls {
 
 .prev-5, .next-5 {
   display: inline-block;
-}
-
-.prev-5 .arrow-left, .next-5 .arrow-right {
-  margin: 0 3px 0 3px;
-  display: inline-block;
-  background-size: cover;
-  width: 15px;
-  height: 15px;
-  vertical-align: middle;
-}
-
-.prev-5 .arrow-left {
-  background-image: url('https://vortex.accuweather.com/adc2010/images/slate/arrow-left-solid-orange.svg');
-}
-
-.next-5 .arrow-right {
-  background-image: url('https://vortex.accuweather.com/adc2010/images/slate/arrow-right-solid-orange.svg');
 }

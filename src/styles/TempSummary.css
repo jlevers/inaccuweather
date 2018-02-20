@@ -1,5 +1,27 @@
 .TempSummary {
-  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.TempSummary .temp-summary-main {
+  position: relative;
+}
+
+.TempSummary .temp-summary-main .title {
+  padding: 10px 0 10px 10px;
+}
+
+.TempSummary .temp-summary-prev {
+  box-shadow: inset 7px 0 9px -11px #000;
+}
+
+.TempSummary .temp-summary-main, .TempSummary .temp-summary-prev {
+  width: 50%;
+}
+
+.TempSummary .DataTable {
+  width: 100%;
 }
 
 .TempSummary .time {

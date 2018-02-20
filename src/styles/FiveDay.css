@@ -2,7 +2,7 @@ ul.FiveDay {
   text-align: center;
   display: block;
   padding: 0;
-  margin-top: 5px;
+  margin-top: -10px;
 }
 
 .FiveDay li {
@@ -21,10 +21,9 @@ ul.FiveDay {
   padding: 10px 15px;
   border-bottom: 3px solid #F05514;
   width: 155px;
-  background: #FFF;
-  box-shadow: 10px 0 10px -10px #666;
   display: block;
   position: relative;
+  box-shadow: 10px 0 10px -10px #666;
 }
 
 .FiveDay li div.FullDay.active.last {

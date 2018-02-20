@@ -1,15 +1,8 @@
-.FullDay.feature-element {
+.FullDay.feature-element, .FullDay.primary-section {
   position: relative;
   height: 245px;
-  background: #F7F6F5;
   border-left: none;
   border-radius: 3px;
-}
-
-.date {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #999;
 }
 
 .temp {

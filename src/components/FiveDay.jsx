@@ -24,6 +24,8 @@ class FiveDay extends Component {
         description: 'Mostly sunny and beautiful'
       });
     }, this);
+
+    this.end = this.props.start + this.props.step;
   }
 
   // Render a FullDay element with its relevant weather info
@@ -33,29 +35,47 @@ class FiveDay extends Component {
         high={this.state.days[i].high}
         low={this.state.days[i].low}
         description={this.state.days[i].description}
-        active={this.state.days[i].date.getDate() === new Date().getDate()}
+        active={i === this.props.active}
       />
     );
   }
 
   render() {
+
+    let dayList = [];
+
+    // Iterate over 5 days
+    for (let i = 0; i < this.props.step; i++) {
+      let day = [];
+      let classes = [];
+
+      // If it's the first day in the list, add class 'first' and back arrow if appropriate
+      if (i === 0) {
+        classes.push('first');
+        day.push(
+          this.props.prev && <a className='left-arrow icon' href={'/en/th/bangkok/318849/daily-weather-forecast/318849?day=' + (this.props.start - this.props.step)}>
+              Last {this.props.step} days
+          </a>
+        );
+      }
+
+      // If it's the last day in the list, add class 'last' and forward arrow if appropriate
+      if (i === 4) {
+        classes.push('last');
+        day.push(
+          this.props.next && <a className='right-arrow icon' href={'/en/th/bangkok/318849/daily-weather-forecast/318849?day=' + (this.props.start + this.props.step)}>
+              Next {this.props.step} days
+          </a>
+        );
+      }
+
+      day.push(this.renderFullDay(i));
+      dayList.push(<li className={classes.join(' ')}>{day}</li>);
+    }
+
     return (
       <ul className='FiveDay main-body'>
-        <li className='first'>
-          {this.props.prev && <a className='left-arrow icon' href={'/en/th/bangkok/318849/daily-weather-forecast/318849?day=' + (this.props.start - this.props.step)}>
-              Last {this.props.step} days
-          </a>}
-          {this.renderFullDay(0)}
-        </li>
-        <li>{this.renderFullDay(1)}</li>
-        <li>{this.renderFullDay(2)}</li>
-        <li>{this.renderFullDay(3)}</li>
-        <li className='last'>
-          {this.renderFullDay(4)}
-          {this.props.next && <a className='right-arrow icon' href={'/en/th/bangkok/318849/daily-weather-forecast/318849?day=' + (parseInt(this.props.start) + this.props.step)}>
-            Next {this.props.step} days
-          </a>}
-        </li>
+        {dayList}
       </ul>
     )
   }

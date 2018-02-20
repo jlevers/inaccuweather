@@ -1,7 +1,20 @@
+.DataTable {
+  border-collapse: collapse;
+}
+
 .DataTable .data-table-row {
-  border-top: 1px solid #C8C8C8;
   height: 38px;
-  vertical-align: middle;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.DataTable .data-table-row.has-data {
+  border-top: 1px solid #C8C8C8;
+}
+
+.DataTable .data-table-row td:first-child, .DataTable .data-table-row th:first-child {
+  padding-left: 15px;
 }
 
 .DataTable .data-table-row-title {

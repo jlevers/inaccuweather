@@ -66,14 +66,18 @@ function getBody(values, areRowTitles) {
   // Create table from values[][], and include row titles if they exist
   for (const e of values) {
     let row = [];
+    let hasData = '';
     for (let f = 0; f < e.length; f++) {
+      if (e[f].length > 0) {
+        hasData = ' has-data';
+      }
       if (areRowTitles && f === 0) {
         row.push(<th scope='row' className='data-table-row-title'>{e[f]}</th>)
       } else {
         row.push(<td>{e[f]}</td>);
       }
     }
-    body.push(<tr className='data-table-row'>{row}</tr>);
+    body.push(<tr className={'data-table-row' + hasData}>{row}</tr>);
   }
 
   return <tbody>{body}</tbody>

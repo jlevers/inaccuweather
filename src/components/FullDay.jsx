@@ -5,7 +5,7 @@ import '../styles/FullDay.css';
  * Returns a day of weather info
  */
 function FullDay(props) {
-  const active = props.active ? ' active' : '';
+  const active = props.active ? ' active primary-section' : '';
 
   // If the day being rendered is today, change day name to "today"
   let dayName = props.date.toLocaleDateString('en-US', { weekday: 'short' });

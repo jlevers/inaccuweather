@@ -10,7 +10,7 @@ function DayDetailInfo(props) {
   const pressureSymbol = props.pressure.pressureChange ? '↑' : '↓';
   return (
     <div className='DayDetailInfo feature-element'>
-      <div className='forecast-main'>
+      <div className='forecast-main primary-section'>
         <div className='weather-image icon'></div>
         <div className='temp'>
           <span className='main-temp'>{props.mainTemp}&deg;</span>

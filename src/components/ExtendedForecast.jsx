@@ -4,6 +4,8 @@ import FiveDay from './FiveDay.jsx';
 import DayDetails from './DayDetails.jsx';
 import RiseSetWidget from './RiseSetWidget.jsx';
 import TempSummary from './TempSummary.jsx';
+import TempHistory from './TempHistory.jsx';
+import getQueryParams from '../lib/queryParams.js';
 import '../styles/ExtendedForecast.css';
 
 class ExtendedForecast extends Component {
@@ -13,6 +15,8 @@ class ExtendedForecast extends Component {
 
   render() {
     const prevNext = this.prevAndNext();
+    const queryParams = getQueryParams(window);
+    const day = 0;
 
     return (
       <div className='ExtendedForecast'>
@@ -29,18 +33,21 @@ class ExtendedForecast extends Component {
           prev={prevNext[0]}
           next={prevNext[1]}
           step={this.props.step}
+          active={day}
         />
         <DayDetails
           start={this.props.start}
         />
         <div className='rise-set-widgets main-body'>
           <RiseSetWidget
+            className='primary-section'
             planet='Sun'
             rise='6:45 AM'
             set='6:19 PM'
             duration='11:34'
           />
           <RiseSetWidget
+            className='primary-section'
             planet='Moon'
             rise='10:02 PM'
             set='10:23 AM'
@@ -48,6 +55,9 @@ class ExtendedForecast extends Component {
           />
         </div>
         <TempSummary />
+        <TempHistory
+          active={day}
+        />
       </div>
     );
   }

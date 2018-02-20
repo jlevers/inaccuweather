@@ -23,16 +23,15 @@ ul {
   width: 990px;
 }
 
-.feature-element {
-  border: 1px solid #C8C8C8;
-  background-color: #FFF;
-  margin-top: 20px;
-  text-align: left;
-}
-
-.feature-label {
+.feature-label, .date {
   color: #999;
 }
+
+.date {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
 
 .feature-title {
   color: #00AFBE;
@@ -41,6 +40,38 @@ ul {
   text-transform: uppercase;
 }
 
+.primary-section {
+  background: #FFF;
+}
+
+.feature-element {
+  border: 1px solid #C8C8C8;
+  background-color: #F7F6F5;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.feature-element.primary-section {
+  background-color: #FFF;
+}
+
 .icon {
   background-size: cover;
+}
+
+.arrow-left {
+  background-image: url('https://vortex.accuweather.com/adc2010/images/slate/arrow-left-solid-orange.svg');
+}
+
+.arrow-right {
+  background-image: url('https://vortex.accuweather.com/adc2010/images/slate/arrow-right-solid-orange.svg');
+}
+
+.arrow-left, .arrow-right {
+  margin: 0 3px 0 3px;
+  display: inline-block;
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
 }
