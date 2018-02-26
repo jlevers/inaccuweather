@@ -1,13 +1,19 @@
-.FlagIcon {
+.flag-container .FlagIcon, .flag-selector-container .FlagIcon {
   float: left;
+  padding-right: 15px;
+}
+
+.flag-container .FlagIcon {
   margin-top: 12px;
   margin-left: 10px;
 }
 
-.FlagIcon::after {
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 20px solid red;
-  width: 0;
-  height: 0;
+.flag-container .FlagIcon::after {
+  content: '';
+  border-style: solid;
+  border-width: 6px 6px 0;
+  border-color: #1f384d transparent transparent;
+  position: absolute;
+  left: 30px;
+  top: 5px;
 }

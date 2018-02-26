@@ -1,33 +1,41 @@
-import React from 'react';
-import FlagIcon from './FlagIcon.jsx';
+import React, { Component } from 'react';
+import CountryChooser from './CountryChooser.jsx';
 import '../styles/SettingsBar.css';
 
-function SettingsBar(props) {
-  return (
-    <div className='SettingsBar'>
-      <div className='settings-bar-container limit-width'>
-        <div className='location-settings'>
+class SettingsBar extends Component {
+  render() {
+    const breadcrumbs = this.props.breadcrumbs;
 
-          {/* Display country flag */}
-          <FlagIcon code={props.location.code} className='FlagIcon' />
+    return (
+      <div className='SettingsBar'>
+        <div className='settings-bar-container limit-width'>
+          <div className='location-settings'>
 
-          {/* Display location breadcrumbs */}
-          <ul className='country-breadcrumbs'>
-            <li className='first'>World</li>
-            <li>Asia</li>
-            <li>Thailand</li>
-            <li>Bangkok</li>
-            <li className='last'>Bangkok</li>
-          </ul>
-        </div>
+            {/* Display country flag and country selector*/}
+            <CountryChooser />
 
-        {/* Display language and units settings */}
-        <div className='data-settings'>
-          <span>English (US), &deg;F</span>
+            {/* Display location breadcrumbs */}
+            <ul className='country-breadcrumbs'>
+              <li className='first'>{breadcrumbs.world}</li>
+              <li>{breadcrumbs.continent}</li>
+              <li>{breadcrumbs.country}</li>
+              <li>{breadcrumbs.region}</li>
+              <li className='last'>{breadcrumbs.city}</li>
+            </ul>
+          </div>
+
+          {/* Display language and units settings */}
+          <div className='data-settings'>
+            <span>English (US), &deg;F</span>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  onHover() {
+
+  }
 }
 
 export default SettingsBar;

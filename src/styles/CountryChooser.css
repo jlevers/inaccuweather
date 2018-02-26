@@ -1,0 +1,67 @@
+.flag-container {
+  display: inline-block;
+  padding: 0;
+}
+
+.flag-selector-container {
+  background-color: #141d26;
+  color: #FFF;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 2px;
+  font-size: 16px;
+  padding: 5px;
+  padding-bottom: 10px;
+  text-align: left;
+  min-width: 234px;
+}
+
+.flag-selector-container .flag-selector-top-section {
+  padding-bottom: 5px;
+  border-bottom: 1px solid white;
+  display: inline-block;
+  width: 100%;
+}
+
+.flag-selector-container .flag-selector-top-section .current-country span:nth-child(2) {
+  font-weight: bold;
+}
+
+.flag-selector-container .flag-selector-top-section div:last-child {
+  font-size: 12px;
+}
+
+.flag-selector-container .recent-countries {
+  display: block;
+}
+
+.flag-selector-container .recent-countries ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 7px;
+}
+
+.flag-selector-container .recent-countries ul li {
+  display: block;
+  padding: 10px 0 0 0;
+}
+
+.flag-selector-container .recent-countries button {
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  background-color: #999;
+  color: #FFF;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 5px;
+  box-sizing: padding;
+  width: 100%;
+}
+
+.flag-selector-container .recent-countries button:hover {
+  background-color: #D6D3D2;
+  color: #1F384D;
+}
