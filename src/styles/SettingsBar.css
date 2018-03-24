@@ -57,8 +57,27 @@
 }
 
 .data-settings span {
-  color: #4C6071;
+  color: #1F384D;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.data-settings span::after {
+  display: inline-block;
+  content: '';
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 3px;
+  right: -20px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-image: url('https://vortex.accuweather.com/adc2010/images/slate/settings-gear.svg');
+  background-position: 50% 50%;
+}
+
+
+.data-settings span:hover {
+  color: #4C6071;
 }

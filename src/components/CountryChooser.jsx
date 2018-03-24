@@ -4,30 +4,31 @@ import FlagIcon from './FlagIcon.jsx';
 import '../styles/CountryChooser.css';
 
 class CountryChooser extends Component {
-  constructor(props) {
-    super(props);
-    this.flagCode = this.props.recent[0][0];
-    this.country = this.props.recent[0][1];
-    this.flag = <FlagIcon code={this.flagCode} className='FlagIcon' />;
-  }
 
   render() {
+
+    const flagCode = this.props.recent[0][0].toLowerCase();
+    const flag = <FlagIcon code={flagCode} className='FlagIcon' />;
+    const country = this.props.recent[0][1];
+
+    // Solitary flag icon for when the flag is not being hovered on
     let render = (
       <div
         onMouseEnter={this.props.onHover}
         className='flag-container'>
-        {this.flag}
+        {flag}
       </div>
     );
 
     if (this.props.hover) {
+      // Country selector popup (appears on hover)
       render = (
         <div onMouseLeave={this.props.onHover}
           className='flag-selector-container'>
           <div className='flag-selector-top-section'>
             <div className='current-country'>
-              <span className='current-flag'>{this.flag}</span>
-              <span>&nbsp;{this.country}</span>
+              <span className='current-flag'>{flag}</span>
+              <span>&nbsp;{country}</span>
             </div>
             <div>My Recent Countries</div>
           </div>
@@ -44,14 +45,19 @@ class CountryChooser extends Component {
     return render;
   }
 
+  // Renders list of recent countries
   recentCountries() {
     const recents = [];
 
-    for (var i = 0; i < this.props.recent.length; i++) {
+    for (let i = 0; i < this.props.recent.length; i++) {
       recents.push(
-        <li key={i}>
+        <li key={i}
+          onClick={ (e) => {
+            this.props.countryClick(this.props.recent[i][0]);
+          }}
+        >
           <FlagIcon
-            code={this.props.recent[i][0]}
+            code={this.props.recent[i][0].toLowerCase()}
             className='FlagIcon'
           />
           <span>&nbsp;{this.props.recent[i][1]}</span>
@@ -76,6 +82,12 @@ const mapDispatchToProps = (dispatch) => {
       dispatch({
         type: 'TOGGLE_HOVER'
       });
+    },
+    countryClick: (country) => {
+      dispatch({
+        type: 'CHANGE_COUNTRY',
+        country
+      })
     }
   }
 };
